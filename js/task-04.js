@@ -3,14 +3,14 @@ const decrementBtnEl = counterEl.querySelector('button[data-action="decrement"]'
 const incrementBtnEl = counterEl.querySelector('button[data-action="increment"]');
 const counterValueEl = counterEl.querySelector('#value');
 
+let counterValue = 0;
 const handleDecrementClick = ()=> {
-        counterValueEl.textContent -= 1;
+    counterValue -= 1;
+    counterValueEl.textContent = counterValue;
 }
 const handleIncrementClick = ()=> {
-        counterValueEl.textContent = Number(counterValueEl.textContent) + 1;
+    counterValue += 1;
+    counterValueEl.textContent = counterValue;
 }
-
 decrementBtnEl.addEventListener("click", handleDecrementClick);
 incrementBtnEl.addEventListener("click", handleIncrementClick);
-
-
